@@ -1,13 +1,9 @@
 class Solution {
     public int[] sortArray(int[] nums) {
         int n = nums.length;
-
-        // Build max heap
         for (int i = n / 2 - 1; i >= 0; i--) {
             heapify(nums, n, i);
         }
-
-        // Extract elements from heap
         for (int i = n - 1; i > 0; i--) {
             int temp = nums[0];
             nums[0] = nums[i];
